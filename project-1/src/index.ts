@@ -11,4 +11,10 @@ function removeDuplicates(numbers: number[]): number[] {
     return Array.from(new Set(numbers));
 }
 
-// console.log(removeDuplicates([1,3,3,4,4,5,5,6,6,6,7,8,8,9]));
+// Problem 3
+
+function countWordOccurrences(sentence: string, word: string): number {
+    
+    const words = sentence.toLowerCase().split(" ");
+    return words.filter(w => w === word.toLowerCase()).length;
+}
