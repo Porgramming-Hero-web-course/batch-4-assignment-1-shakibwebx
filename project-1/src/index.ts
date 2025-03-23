@@ -36,3 +36,27 @@ function calculateShapeArea(s: Shape): number {
     
     }
 }
+
+
+// problem 5
+
+function getProperty<X, Y extends keyof X>(obj:X, key:Y): X[Y]{
+    return obj[key]
+}
+
+// Problem 6
+
+interface Profile {
+    name: string;
+    age: number;
+    email: string;
+}
+
+function updateProfile(profile:Profile, updates: Partial<Profile>): Profile{
+    return {...profile, ...updates};
+}
+
+// Sample Input :
+const myProfile = { name: "Alice", age: 25, email: "alice@example.com" };
+console.log(updateProfile(myProfile, { email: "shakib@shakib.com", name: "Shakib" }));
+
